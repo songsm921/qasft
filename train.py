@@ -72,6 +72,7 @@ def train_phase(model, tokenizer, pruned_solutions, iteration, args):
     training_args.dataset_text_field = 'text'
     training_args.remove_unused_columns=False,
     training_args.max_seq_length = 20480 #32768
+    
     trainer = SFTTrainer(
         model,
         train_dataset=train_dataset,
